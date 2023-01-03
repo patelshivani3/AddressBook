@@ -11,6 +11,9 @@ namespace AddressBook
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome to Address Book Programs");
+           //UC1 Create a contact deatails of person
+            Person.AddPerson();
+            Person.PrintPerson();
             Console.ReadLine();
         }
     }
