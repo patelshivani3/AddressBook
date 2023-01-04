@@ -15,9 +15,7 @@ namespace AddressBook
         public string City { get; set; }
         public string State { get; set; }
         public string EmailID { get; set; }
-        public string UserName { get; set; }
-        public string ContactNumber { get; set; }
-        public string EditNumber { get; set; }
+        
         public static List<Person> People = new List<Person>();
 
         // method to take user inputs
@@ -37,7 +35,7 @@ namespace AddressBook
             person.City = Console.ReadLine();
             Console.Write("Enter the state: ");
             person.State = Console.ReadLine();
-            Console.Write("Enter the EmailId");
+            Console.Write("Enter the EmailId:");
             person.EmailID = Console.ReadLine();
             People.Add(person);
         }
