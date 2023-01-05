@@ -11,18 +11,30 @@ namespace AddressBook
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome To Address Book Program");
-            Console.WriteLine("\n1.Create Contact\n2.Add New Contact");
+            Console.WriteLine("\n1.Create Contact\n2.Add New Contact\n3.Edit Contact");
+            Contact contact = new Contact();
             int option = Convert.ToInt32(Console.ReadLine());
+              
             switch (option)
             {
                 //UC1 - Create Contact
                 case 1:
-                    AddressBook1.CreateContacts();
+                    Contact.CreateContacts();
+                    Contact.DisplayContact();
                     break;
 
                 case 2:
-                    Console.WriteLine("\n Add New Contact to Address Book");
-                    AddressBook1.CreateContacts();
+                    Console.WriteLine("\nAdd New Contact to Address Book");
+                    Contact.CreateContacts();
+                    Contact.DisplayContact();
+                    break;
+
+                case 3:
+                    Console.WriteLine("\nEdit The Contact From Address Book");
+                    //Contact.CreateContacts();
+                   // Contact.DisplayContact();
+                    Contact.EditContact();
+                    Contact.DisplayContact();
                     break;
 
                 default:
