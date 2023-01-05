@@ -34,45 +34,46 @@ namespace AddressBook
             this.PhoneNumber = PhoneNumber;
             this.Email = EmailId;
         }
-        public static void CreateContacts()
+        public static void CreateContacts(int num)
         {
             //reading data and storing in set method/properties 
+            for(int i = 0; i < num; i++)
+            {
+                Contact contact = new Contact();
+                Console.Write("Enter First Name : ");
+                contact.FirstName = Console.ReadLine();
 
+                Console.Write("Enter Last Name : ");
+                contact.LastName = Console.ReadLine();
 
-            Contact contact = new Contact();
-            Console.Write("Enter First Name : ");
-            contact.FirstName = Console.ReadLine();
+                Console.Write("Enter Address : ");
+                contact.Address = Console.ReadLine();
 
-            Console.Write("Enter Last Name : ");
-            contact.LastName = Console.ReadLine();
+                Console.Write("Enter City Name : ");
+                contact.City = Console.ReadLine();
 
-            Console.Write("Enter Address : ");
-            contact.Address = Console.ReadLine();
+                Console.Write("Enter State Name : ");
+                contact.State = Console.ReadLine();
 
-            Console.Write("Enter City Name : ");
-            contact.City = Console.ReadLine();
+                Console.Write("Enter ZIP Code : ");
+                contact.ZIPCode = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter State Name : ");
-            contact.State = Console.ReadLine();
+                Console.Write("Enter Phone Number : ");
+                contact.PhoneNumber = Convert.ToInt64(Console.ReadLine());
 
-            Console.Write("Enter ZIP Code : ");
-            contact.ZIPCode = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter Email Id : ");
+                contact.Email = Console.ReadLine();
 
-            Console.Write("Enter Phone Number : ");
-            contact.PhoneNumber = Convert.ToInt64(Console.ReadLine());
-
-            Console.Write("Enter Email Id : ");
-            contact.Email = Console.ReadLine();
-
-
-            data.Add(contact); //Add is a method in List
+                data.Add(contact); //Add is a method in List
+                Console.WriteLine("...............................................");
+            }            
         }
         public  static void DisplayContact()
         {
             //CreateContacts();
             foreach (Contact record in data)
             {
-                Console.WriteLine("\n---------------------------------------------");
+                Console.WriteLine("\n===================================================");
                 Console.WriteLine("First Name : " + record.FirstName);
                 Console.WriteLine("Last Name : " + record.LastName);
                 Console.WriteLine("Address : " + record.Address);
