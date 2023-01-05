@@ -11,7 +11,7 @@ namespace AddressBook
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome To Address Book Program");
-            Console.WriteLine("\n1.Create Contact\n2.Add New Contact\n3.Edit Contact");
+            Console.WriteLine("\n1.Create Contact\n2.Add New Contact\n3.Edit Contact\n4.Delete Contact");
             Contact contact = new Contact();
             int option = Convert.ToInt32(Console.ReadLine());
               
@@ -29,13 +29,14 @@ namespace AddressBook
                     Contact.DisplayContact();
                     break;
 
-                case 3:
+                case 4:
                     Console.WriteLine("\nEdit The Contact From Address Book");
-                    //Contact.CreateContacts();
-                   // Contact.DisplayContact();
-                    Contact.EditContact();
+                    Contact.CreateContacts();
+                    Contact.DisplayContact();
+                    Contact.deleteContact();
                     Contact.DisplayContact();
                     break;
+
 
                 default:
                     Console.WriteLine("\nChoose from given option only!\n");

@@ -149,5 +149,23 @@ namespace AddressBook
                 }
             }
         }
+        public static void deleteContact()      //Creating method for delete contact
+        {
+            bool flag = false;
+            Console.WriteLine("\nTo Remove Contact Enter The First Name:\n");
+            string name = Console.ReadLine();
+            foreach (Contact record in data)
+            {
+                if (record.FirstName == name)
+                {
+                    flag = true;
+                    data.Remove(record);
+                    Console.WriteLine("The contact is successfully removed");
+                    break;
+                }
+            }
+            if (flag == false)
+                Console.WriteLine("The contact is not found");
+        }
     }
 }
