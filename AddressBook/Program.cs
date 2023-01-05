@@ -11,7 +11,7 @@ namespace AddressBook
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome To Address Book Program");
-            Console.WriteLine("\n1.Create Contact\n2.Add New Contact\n3.Edit Contact\n4.Delete Contact\n5.Add Multiple Contact");
+            Console.WriteLine("\n1.Create Contact\n2.Add New Contact\n3.Edit Contact\n4.Delete Contact\n5.Add Multiple Contact\n6.Add Multiple Address Book");
             Contact contact = new Contact();
             int option = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("\nEnter the Number Of Contact You Want To Add: ");
@@ -41,6 +41,9 @@ namespace AddressBook
                     
                     Contact.CreateContacts(num);
                     Contact.DisplayContact();
+                    break;
+                case 6:
+                    Contact.AddressBook();
                     break;
 
                 default:
